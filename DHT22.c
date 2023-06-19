@@ -43,7 +43,7 @@ unsigned char DHT22_ReadByte(){
 					break;	
 				case DHT22_LOW:
 					if(step){
-						if(step<11)	rbyte &= ~(1<<(7-i));	// Предел значений 7..16
+						if(step<11) rbyte &= ~(1<<(7-i));	// Предел значений 7..16
 						else rbyte |= 1<<(7-i);
 					step = 0;
 					run = 0;
@@ -63,7 +63,7 @@ unsigned char DHT22_ReadByte2(){
 		sk=0;
 		while(~DHT22_STATUS){
 			sk++;
-			if (sk>100)	break;
+			if (sk>100) break;
 			_delay_us(1);
 		}
 		_delay_us(30);
@@ -138,15 +138,15 @@ unsigned short DHT22_AskStrSensor(char *shmr, char *stmr){
 				stmr[0] = 43;	// Ставим +
 				
 		if(!((tmr/10)/10)) stmr[1]=32;	// Если нет десятичных
-		else stmr[1]=(tmr/100)+48;		// Десятичные
+		else stmr[1]=(tmr/100)+48;	// Десятичные
 		stmr[2]=((tmr/10)%10)+48;	// Единицы
-		stmr[3]=0x2C;				// Запятая
+		stmr[3]=0x2C;			// Запятая
 		stmr[4]=(tmr%10)+48;		// Дробной часть
 		stmr[5]=0;								
 	} else { 
 	// Если нет данных
 			shmr[0]=0xCD; shmr[1]=0x2F; shmr[2]=0xC4; shmr[3]=0x00; shmr[4]=0x00;				// Н / Д
-			stmr[0]=0x20; stmr[1]=0xCD;	stmr[2]=0x2F; stmr[3]=0xC4;	stmr[4]=0x00; stmr[5]=0x00; // Н / Д
+			stmr[0]=0x20; stmr[1]=0xCD; stmr[2]=0x2F; stmr[3]=0xC4; stmr[4]=0x00; stmr[5]=0x00; // Н / Д
 	}
 	return 0;
 }
