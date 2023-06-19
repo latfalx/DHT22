@@ -145,8 +145,8 @@ unsigned short DHT22_AskStrSensor(char *shmr, char *stmr){
 		stmr[5]=0;								
 	} else { 
 	// Если нет данных
-			shmr[0]=0xCD; shmr[1]=0x2F; shmr[2]=0xC4; shmr[3]=0x00; shmr[4]=0x00;				// Н / Д
-			stmr[0]=0x20; stmr[1]=0xCD; stmr[2]=0x2F; stmr[3]=0xC4; stmr[4]=0x00; stmr[5]=0x00; // Н / Д
+			shmr[0]=0xCD; shmr[1]=0x2F; shmr[2]=0xC4; shmr[3]=0x00; shmr[4]=0x00;			// Н / Д
+			stmr[0]=0x20; stmr[1]=0xCD; stmr[2]=0x2F; stmr[3]=0xC4; stmr[4]=0x00; stmr[5]=0x00;	// Н / Д
 	}
 	return 0;
 }
