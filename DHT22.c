@@ -68,7 +68,7 @@ unsigned char DHT22_ReadByte()														// Считывания байта �
 	}
 	return rbyte;
 }
-unsigned char DHT22_ReadByte2()														// Не используется (рабочий вариант)
+unsigned char DHT22_ReadByte2()													// Не используется (рабочий вариант)
 {
 	int i,sk;
 	unsigned char rbyte=0;
