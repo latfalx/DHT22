@@ -1,11 +1,11 @@
 //--------------------------------/	Назначение порта /--------------------------------
-#define DHT22_PORT PORTD										   // Назначение порта
-#define DHT22_DDR  DDRD							           // Регистр управления порта
-#define DHT22_PIN  PD3													 // Номер пина
-#define DHT22_STATUS PIND & 0x08					    // Маска привязана к DHT22_PIN
+#define DHT22_PORT PORTD                                           // Назначение порта
+#define DHT22_DDR  DDRD                                    // Регистр управления порта
+#define DHT22_PIN  PD3                                                   // Номер пина
+#define DHT22_STATUS PIND & 0x08                        // Маска привязана к DHT22_PIN
 //------------------------------------------------------------------------------------
-#define DHT22_DDR_OUT DHT22_DDR  |= (1<<DHT22_PIN)					  // Порт на вывод
-#define DHT22_DDR_IN  DHT22_DDR  &= ~(1<<DHT22_PIN)					   // Порт на ввод
-#define DHT22_PORT_1  DHT22_PORT |= (1<<DHT22_PIN)								  // 1
-#define DHT22_PORT_0  DHT22_PORT &= ~(1<<DHT22_PIN)								  // 0
+#define DHT22_DDR_OUT DHT22_DDR  |= (1<<DHT22_PIN)                    // Порт на вывод
+#define DHT22_DDR_IN  DHT22_DDR  &= ~(1<<DHT22_PIN)                    // Порт на ввод
+#define DHT22_PORT_1  DHT22_PORT |= (1<<DHT22_PIN)                                // 1
+#define DHT22_PORT_0  DHT22_PORT &= ~(1<<DHT22_PIN)                               // 0
 //------------------------------------------------------------------------------------
