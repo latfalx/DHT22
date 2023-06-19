@@ -6,7 +6,7 @@ enum DHT22_LEVEL
 	DHT22_HIGH
 };
 enum DHT22_LEVEL DHT22_STEP;
-void DHT22_Start()																	// Стартовый сигнал датчику
+void DHT22_Start()																// Стартовый сигнал датчику
 {
 	DHT22_DDR_OUT;
 	DHT22_PORT_0;
