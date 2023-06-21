@@ -25,7 +25,7 @@ unsigned short DHT22_AskReady(){
 	} else			
 	return 1;
 }
-//--------------------------------/	Считывания байта автомат состоянием	
+//--------------------------------/	Считывания байта	
 unsigned char DHT22_ReadByte(){
 	int i, run, step=0;
 	unsigned char rbyte=0;
@@ -39,6 +39,7 @@ unsigned char DHT22_ReadByte(){
 					break;
 				case DHT22_HIGH:
 					step++;
+					if(step>100) return 0;
 					DHT22_STEP = DHT22_READ;
 					break;	
 				case DHT22_LOW:
